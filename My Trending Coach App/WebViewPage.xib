@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Eurostile Round W00 Bold.ttf">
+            <string>EurostileRoundW00-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewPage">
+            <connections>
+                <outlet property="IBWebView" destination="Dyu-Eq-ovg" id="ako-79-9mh"/>
+                <outlet property="dismissButton" destination="oaa-Ur-BJY" id="Xc0-DY-ujX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dyu-Eq-ovg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="bCZ-1J-Su0"/>
+                    </connections>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaa-Ur-BJY">
+                    <rect key="frame" x="157" y="592" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Z6j-CQ-fMJ"/>
+                        <constraint firstAttribute="width" constant="60" id="oal-O1-8S0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="EurostileRoundW00-Bold" family="EurostileRoundW00-Bold" pointSize="16"/>
+                    <state key="normal" image="closeCamera"/>
+                    <connections>
+                        <action selector="IBButtonClickBack:" destination="-1" eventType="touchUpInside" id="EaG-Xv-UuR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Dyu-Eq-ovg" secondAttribute="trailing" id="7nX-ME-1EJ"/>
+                <constraint firstAttribute="bottom" secondItem="Dyu-Eq-ovg" secondAttribute="bottom" id="O2K-Jd-ap8"/>
+                <constraint firstItem="Dyu-Eq-ovg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="V5w-FI-vNn"/>
+                <constraint firstItem="oaa-Ur-BJY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cjC-1c-e2e"/>
+                <constraint firstAttribute="bottom" secondItem="oaa-Ur-BJY" secondAttribute="bottom" constant="15" id="dIe-QB-4Jv"/>
+                <constraint firstItem="Dyu-Eq-ovg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l8r-0S-4Ew"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeCamera" width="98" height="98"/>
+    </resources>
+</document>

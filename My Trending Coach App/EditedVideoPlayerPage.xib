@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arvo-Bold_0.ttf">
+            <string>Arvo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditedVideoPlayerPage">
+            <connections>
+                <outlet property="IBButtonPlayPause" destination="uDs-Tc-CSY" id="qVT-QD-f3c"/>
+                <outlet property="IBViewMovie" destination="hzO-A9-JBF" id="9Fo-pe-FWv"/>
+                <outlet property="scrubberBehavior" destination="oVO-gh-IOh" id="fKK-Wq-O0w"/>
+                <outlet property="view" destination="S7b-zA-hKi" id="DFm-n6-OSc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="S7b-zA-hKi">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-Pf-XyI">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="375"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stripReverse" translatesAutoresizingMaskIntoConstraints="NO" id="ljU-sC-qTh">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="375"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUA-dd-HD1">
+                            <rect key="frame" x="12" y="25" width="75" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="52a-15-Ubo"/>
+                                <constraint firstAttribute="width" constant="75" id="jJc-Fd-Dse"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Arvo-Bold" family="Arvo" pointSize="15"/>
+                            <state key="normal" title="Redo" backgroundImage="strip">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="IBButtonClickRedo:" destination="-1" eventType="touchUpInside" id="Wrv-QV-WuV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ljU-sC-qTh" secondAttribute="bottom" id="3VJ-NG-K2w"/>
+                        <constraint firstAttribute="trailing" secondItem="ljU-sC-qTh" secondAttribute="trailing" id="Sjn-1D-VaB"/>
+                        <constraint firstAttribute="width" constant="100" id="W25-Dy-Dp7"/>
+                        <constraint firstItem="VUA-dd-HD1" firstAttribute="top" secondItem="NFK-Pf-XyI" secondAttribute="top" constant="25" id="ZB1-JB-IO8"/>
+                        <constraint firstItem="ljU-sC-qTh" firstAttribute="top" secondItem="NFK-Pf-XyI" secondAttribute="top" id="efj-bO-SAg"/>
+                        <constraint firstItem="VUA-dd-HD1" firstAttribute="leading" secondItem="NFK-Pf-XyI" secondAttribute="leading" constant="12" id="gCe-rv-7nX"/>
+                        <constraint firstItem="ljU-sC-qTh" firstAttribute="leading" secondItem="NFK-Pf-XyI" secondAttribute="leading" id="p3d-ZE-bqM"/>
+                    </constraints>
+                    <variation key="heightClass=compact-widthClass=regular">
+                        <mask key="subviews">
+                            <exclude reference="VUA-dd-HD1"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4E-1P-1Uc">
+                    <rect key="frame" x="0.0" y="305" width="667" height="70"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strip" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-aU-5wp">
+                            <rect key="frame" x="0.0" y="0.0" width="667" height="70"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEO-2b-ZOe">
+                            <rect key="frame" x="95" y="10" width="447" height="50"/>
+                            <subviews>
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GhA-Eg-cbc">
+                                    <rect key="frame" x="8" y="10" width="431" height="31"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="thumbTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="sliderValueChanged:forEvent:" destination="oVO-gh-IOh" eventType="valueChanged" id="WTY-ai-j4l"/>
+                                    </connections>
+                                </slider>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="GhA-Eg-cbc" secondAttribute="bottom" constant="10" id="LM2-Eg-LTt"/>
+                                <constraint firstItem="GhA-Eg-cbc" firstAttribute="leading" secondItem="YEO-2b-ZOe" secondAttribute="leading" constant="10" id="VLn-am-Q7f"/>
+                                <constraint firstAttribute="trailing" secondItem="GhA-Eg-cbc" secondAttribute="trailing" constant="10" id="WJN-IR-TMH"/>
+                                <constraint firstItem="GhA-Eg-cbc" firstAttribute="top" secondItem="YEO-2b-ZOe" secondAttribute="top" constant="10" id="lZj-EK-pm3"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-Tc-CSY">
+                            <rect key="frame" x="25" y="10" width="50" height="50"/>
+                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="7dn-x0-Rq7"/>
+                                <constraint firstAttribute="height" constant="50" id="ebL-ja-KEM"/>
+                            </constraints>
+                            <state key="normal" image="BtnPause">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="selected" image="BtnPlay"/>
+                            <connections>
+                                <action selector="playPause:" destination="oVO-gh-IOh" eventType="touchUpInside" id="5p4-6N-k5z"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ2-bd-GSR">
+                            <rect key="frame" x="562" y="10" width="90" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="6LJ-35-Y80"/>
+                                <constraint firstAttribute="width" constant="90" id="lBy-sC-kdW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Arvo-Bold" family="Arvo" pointSize="15"/>
+                            <state key="normal" title="Save" backgroundImage="strip">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="IBButtonClickSave:" destination="-1" eventType="touchUpInside" id="vQg-cI-yxW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="5pm-n4-QPz"/>
+                        <constraint firstItem="hQ2-bd-GSR" firstAttribute="top" secondItem="r4E-1P-1Uc" secondAttribute="top" constant="10" id="DJr-C0-hbH"/>
+                        <constraint firstAttribute="bottom" secondItem="YEO-2b-ZOe" secondAttribute="bottom" constant="10" id="J2U-a5-6gp"/>
+                        <constraint firstAttribute="trailing" secondItem="hQ2-bd-GSR" secondAttribute="trailing" constant="15" id="QG5-Wu-mkZ"/>
+                        <constraint firstItem="uDs-Tc-CSY" firstAttribute="leading" secondItem="r4E-1P-1Uc" secondAttribute="leading" constant="25" id="SOP-Cz-G0j"/>
+                        <constraint firstItem="KkQ-aU-5wp" firstAttribute="leading" secondItem="r4E-1P-1Uc" secondAttribute="leading" id="YJK-CP-srW"/>
+                        <constraint firstItem="YEO-2b-ZOe" firstAttribute="leading" secondItem="uDs-Tc-CSY" secondAttribute="trailing" constant="20" id="ZxK-c7-Zgh"/>
+                        <constraint firstAttribute="bottom" secondItem="KkQ-aU-5wp" secondAttribute="bottom" id="ikT-j0-E0k"/>
+                        <constraint firstAttribute="trailing" secondItem="KkQ-aU-5wp" secondAttribute="trailing" id="inB-44-cGM"/>
+                        <constraint firstItem="uDs-Tc-CSY" firstAttribute="top" secondItem="r4E-1P-1Uc" secondAttribute="top" constant="10" id="mQK-YK-4nO"/>
+                        <constraint firstItem="hQ2-bd-GSR" firstAttribute="leading" secondItem="YEO-2b-ZOe" secondAttribute="trailing" constant="20" id="x6i-h6-KKy"/>
+                        <constraint firstItem="YEO-2b-ZOe" firstAttribute="top" secondItem="r4E-1P-1Uc" secondAttribute="top" constant="10" id="xJ7-bE-mOp"/>
+                        <constraint firstItem="KkQ-aU-5wp" firstAttribute="top" secondItem="r4E-1P-1Uc" secondAttribute="top" id="zvv-Yq-TdN"/>
+                    </constraints>
+                    <variation key="heightClass=compact-widthClass=regular">
+                        <mask key="subviews">
+                            <exclude reference="uDs-Tc-CSY"/>
+                            <exclude reference="hQ2-bd-GSR"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzO-A9-JBF">
+                    <rect key="frame" x="120" y="20" width="527" height="265"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NFK-Pf-XyI" firstAttribute="top" secondItem="S7b-zA-hKi" secondAttribute="top" id="8lg-V0-FpQ"/>
+                <constraint firstItem="r4E-1P-1Uc" firstAttribute="top" secondItem="hzO-A9-JBF" secondAttribute="bottom" constant="20" id="GrZ-sQ-4CJ"/>
+                <constraint firstAttribute="trailing" secondItem="r4E-1P-1Uc" secondAttribute="trailing" id="LFx-2m-kw3"/>
+                <constraint firstItem="hzO-A9-JBF" firstAttribute="leading" secondItem="NFK-Pf-XyI" secondAttribute="trailing" constant="20" id="P91-3W-foi"/>
+                <constraint firstItem="hzO-A9-JBF" firstAttribute="top" secondItem="S7b-zA-hKi" secondAttribute="top" constant="20" id="Vsy-8C-Wfb"/>
+                <constraint firstAttribute="bottom" secondItem="NFK-Pf-XyI" secondAttribute="bottom" id="hHU-xU-L3i"/>
+                <constraint firstAttribute="bottom" secondItem="r4E-1P-1Uc" secondAttribute="bottom" id="oXd-q9-cAn"/>
+                <constraint firstItem="r4E-1P-1Uc" firstAttribute="leading" secondItem="S7b-zA-hKi" secondAttribute="leading" id="sYZ-fC-2bL"/>
+                <constraint firstAttribute="trailing" secondItem="hzO-A9-JBF" secondAttribute="trailing" constant="20" id="xh6-ed-3yR"/>
+                <constraint firstItem="NFK-Pf-XyI" firstAttribute="leading" secondItem="S7b-zA-hKi" secondAttribute="leading" id="zo0-Br-05F"/>
+            </constraints>
+            <variation key="widthClass=regular">
+                <mask key="subviews">
+                    <include reference="r4E-1P-1Uc"/>
+                    <exclude reference="hzO-A9-JBF"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="538" y="336"/>
+        </view>
+        <customObject id="oVO-gh-IOh" customClass="ASBPlayerScrubbing">
+            <connections>
+                <outlet property="slider" destination="GhA-Eg-cbc" id="eDz-8y-NkW"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="BtnPause" width="24" height="24"/>
+        <image name="BtnPlay" width="24" height="24"/>
+        <image name="strip" width="9" height="60"/>
+        <image name="stripReverse" width="60" height="9"/>
+    </resources>
+</document>

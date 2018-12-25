@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Eurostile Round W00 Bold.ttf">
+            <string>EurostileRoundW00-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedBackView">
+            <connections>
+                <outlet property="IBTextviewFeedback" destination="26R-IQ-mAp" id="kYy-7A-o7c"/>
+                <outlet property="IBViewRating" destination="czN-VA-ZAO" id="Pxy-Vb-xI9"/>
+                <outlet property="IbLabelCoach" destination="x3Y-sO-5Gv" id="7gl-qA-Mq9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="706"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUc-Pv-ncz">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="706"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr4-FY-6X9">
+                    <rect key="frame" x="160" y="213" width="280" height="280"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0c3-Qn-YvD">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                            <color key="backgroundColor" red="0.94509803920000002" green="0.3803921569" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rate For Coach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3Y-sO-5Gv">
+                            <rect key="frame" x="23" y="8" width="240" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="EurostileRoundW00-Bold" family="EurostileRoundW00-Bold" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msG-z4-XdU">
+                            <rect key="frame" x="40" y="97" width="201" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="EurostileRoundW00-Bold" family="EurostileRoundW00-Bold" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="czN-VA-ZAO" customClass="HCSStarRatingView">
+                            <rect key="frame" x="70" y="47" width="140" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="YES"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="emptyStarImage" value="rating_star-gray"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="halfStarImage" value="rating_star-red_gray"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="filledStarImage" value="rating_star-red"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didChangeValue:" destination="-1" eventType="valueChanged" id="rWc-sS-fB2"/>
+                            </connections>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ot-M4-CrN">
+                            <rect key="frame" x="23" y="242" width="80" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Ok">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="IBButtonClickOk:" destination="-1" eventType="touchUpInside" id="L3i-cR-Mmr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjn-Kn-0m0">
+                            <rect key="frame" x="183" y="242" width="80" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="IBButtonClickCancel:" destination="-1" eventType="touchUpInside" id="Anq-vd-ZF4"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="26R-IQ-mAp">
+                            <rect key="frame" x="23" y="141" width="240" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="zxC-U4-oQl"/>
+                            </connections>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="5TE-B3-Uhy"/>
+                        <constraint firstItem="0c3-Qn-YvD" firstAttribute="leading" secondItem="Jr4-FY-6X9" secondAttribute="leading" id="Fyc-kK-fxH"/>
+                        <constraint firstAttribute="trailing" secondItem="0c3-Qn-YvD" secondAttribute="trailing" id="SQ2-Nk-7Wr"/>
+                        <constraint firstAttribute="bottom" secondItem="0c3-Qn-YvD" secondAttribute="bottom" id="UnY-pu-xca"/>
+                        <constraint firstAttribute="width" constant="280" id="b0n-nv-iGf"/>
+                        <constraint firstItem="0c3-Qn-YvD" firstAttribute="top" secondItem="Jr4-FY-6X9" secondAttribute="top" id="hJ2-q9-LQM"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Jr4-FY-6X9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2zH-nk-KQ1"/>
+                <constraint firstAttribute="trailing" secondItem="JUc-Pv-ncz" secondAttribute="trailing" id="J8e-K0-hTN"/>
+                <constraint firstItem="JUc-Pv-ncz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RRR-MY-jGb"/>
+                <constraint firstItem="JUc-Pv-ncz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pRn-DC-X8k"/>
+                <constraint firstAttribute="bottom" secondItem="JUc-Pv-ncz" secondAttribute="bottom" id="rJK-sg-lAV"/>
+                <constraint firstItem="Jr4-FY-6X9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ucJ-Cn-hqM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="391" y="445"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rating_star-gray" width="30" height="30"/>
+        <image name="rating_star-red" width="30" height="30"/>
+        <image name="rating_star-red_gray" width="30" height="30"/>
+    </resources>
+</document>

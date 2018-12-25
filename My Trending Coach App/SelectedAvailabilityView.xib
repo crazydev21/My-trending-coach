@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeuib_2.ttf">
+            <string>SegoeUI-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectedAvailabilityView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUo-ZI-jgb">
+                    <rect key="frame" x="75" y="0.0" width="300" height="55"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAZ-Xq-CLe">
+                    <rect key="frame" x="85" y="0.0" width="290" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="JIY-3O-SIH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="17"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwA-Fv-Xfy">
+                    <rect key="frame" x="285" y="35" width="75" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="JPs-zx-7QH"/>
+                        <constraint firstAttribute="height" constant="25" id="PqE-e0-aN0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="13"/>
+                    <state key="normal" title="TENNIS" backgroundImage="greenBuble">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FAZ-Xq-CLe" secondAttribute="bottom" id="25m-vJ-YZo"/>
+                <constraint firstAttribute="trailing" secondItem="WUo-ZI-jgb" secondAttribute="trailing" id="45v-k0-9dw"/>
+                <constraint firstAttribute="bottom" secondItem="WUo-ZI-jgb" secondAttribute="bottom" id="F9q-IH-3u0"/>
+                <constraint firstAttribute="trailing" secondItem="CwA-Fv-Xfy" secondAttribute="trailing" constant="15" id="FTG-Xm-EPa"/>
+                <constraint firstItem="WUo-ZI-jgb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MPZ-65-UcM"/>
+                <constraint firstItem="WUo-ZI-jgb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="75" id="O4c-FS-vNl"/>
+                <constraint firstItem="FAZ-Xq-CLe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="85" id="TKo-w6-mSk"/>
+                <constraint firstAttribute="trailing" secondItem="FAZ-Xq-CLe" secondAttribute="trailing" id="eCF-04-z0o"/>
+                <constraint firstItem="FAZ-Xq-CLe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ocd-72-nbE"/>
+                <constraint firstAttribute="bottom" secondItem="CwA-Fv-Xfy" secondAttribute="bottom" constant="-5" id="y4y-w9-Asq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="content" destination="WUo-ZI-jgb" id="rpE-S6-5Gg"/>
+                <outlet property="nameCouchLabel" destination="FAZ-Xq-CLe" id="hms-3H-9Xt"/>
+                <outlet property="sportNameButton" destination="CwA-Fv-Xfy" id="UPL-jC-G0D"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="greenBuble" width="149" height="82"/>
+    </resources>
+</document>

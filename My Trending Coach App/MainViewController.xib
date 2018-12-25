@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Eurostile Round W00 Bold.ttf">
+            <string>EurostileRoundW00-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="IBScrollView" destination="veF-MQ-woi" id="Vh4-LG-M8C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkV-2n-dDe">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-SP-sxt">
+                            <rect key="frame" x="37.5" y="40" width="300" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="FPk-S8-ekN"/>
+                                <constraint firstAttribute="width" constant="300" id="q2T-AL-GY2"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nUY-SP-sxt" firstAttribute="centerY" secondItem="fkV-2n-dDe" secondAttribute="centerY" id="11r-45-ksw"/>
+                        <constraint firstItem="nUY-SP-sxt" firstAttribute="centerX" secondItem="fkV-2n-dDe" secondAttribute="centerX" id="QUD-gL-qgz"/>
+                        <constraint firstAttribute="height" constant="150" id="jbi-8i-acb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipg-IC-Jxj">
+                    <rect key="frame" x="0.0" y="150" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-1E-kpE">
+                            <rect key="frame" x="10" y="10" width="166.5" height="40"/>
+                            <fontDescription key="fontDescription" name="EurostileRoundW00-Bold" family="EurostileRoundW00-Bold" pointSize="20"/>
+                            <state key="normal" title="MY PROFILE"/>
+                            <connections>
+                                <action selector="IBButtonClickUser:" destination="-1" eventType="touchUpInside" id="xpA-Yn-t7T"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-og-vcc">
+                            <rect key="frame" x="186.5" y="0.0" width="2" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="txP-4A-txY"/>
+                                <constraint firstAttribute="width" constant="2" id="ula-Gj-gXI"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq7-x4-6PD">
+                            <rect key="frame" x="198.5" y="10" width="166.5" height="40"/>
+                            <fontDescription key="fontDescription" name="EurostileRoundW00-Bold" family="EurostileRoundW00-Bold" pointSize="20"/>
+                            <state key="normal" title="LOGOUT"/>
+                            <connections>
+                                <action selector="IBButtonClickLogout:" destination="-1" eventType="touchUpInside" id="6du-7o-uSu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.14509803921568626" green="0.19607843137254902" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Cq7-x4-6PD" secondAttribute="bottom" constant="10" id="0KQ-n4-ZZx"/>
+                        <constraint firstItem="R5J-og-vcc" firstAttribute="leading" secondItem="xaF-1E-kpE" secondAttribute="trailing" constant="10" id="337-ST-zGl"/>
+                        <constraint firstAttribute="bottom" secondItem="xaF-1E-kpE" secondAttribute="bottom" constant="10" id="3s9-oG-ejm"/>
+                        <constraint firstAttribute="height" constant="60" id="8lb-f3-Wdt"/>
+                        <constraint firstItem="R5J-og-vcc" firstAttribute="centerY" secondItem="ipg-IC-Jxj" secondAttribute="centerY" id="HWh-2L-IH9"/>
+                        <constraint firstItem="R5J-og-vcc" firstAttribute="centerX" secondItem="ipg-IC-Jxj" secondAttribute="centerX" id="JaG-R0-IIB"/>
+                        <constraint firstItem="R5J-og-vcc" firstAttribute="leading" secondItem="xaF-1E-kpE" secondAttribute="trailing" constant="10" id="MVc-Dj-gZW"/>
+                        <constraint firstItem="Cq7-x4-6PD" firstAttribute="top" secondItem="ipg-IC-Jxj" secondAttribute="top" constant="10" id="OPt-S8-ktl"/>
+                        <constraint firstAttribute="bottom" secondItem="xaF-1E-kpE" secondAttribute="bottom" constant="10" id="WPK-gh-WKt"/>
+                        <constraint firstItem="xaF-1E-kpE" firstAttribute="leading" secondItem="ipg-IC-Jxj" secondAttribute="leading" constant="10" id="afW-yr-2l6"/>
+                        <constraint firstAttribute="trailing" secondItem="Cq7-x4-6PD" secondAttribute="trailing" constant="10" id="agD-H5-W8m"/>
+                        <constraint firstAttribute="bottom" secondItem="Cq7-x4-6PD" secondAttribute="bottom" constant="10" id="cyY-lF-ftx"/>
+                        <constraint firstItem="xaF-1E-kpE" firstAttribute="top" secondItem="ipg-IC-Jxj" secondAttribute="top" constant="10" id="ddn-5z-Byo"/>
+                        <constraint firstItem="xaF-1E-kpE" firstAttribute="top" secondItem="ipg-IC-Jxj" secondAttribute="top" constant="10" id="fHY-sF-YkU"/>
+                        <constraint firstItem="Cq7-x4-6PD" firstAttribute="leading" secondItem="R5J-og-vcc" secondAttribute="trailing" constant="10" id="flO-Pf-gp3"/>
+                        <constraint firstItem="Cq7-x4-6PD" firstAttribute="leading" secondItem="R5J-og-vcc" secondAttribute="trailing" constant="10" id="ojn-cm-I1f"/>
+                        <constraint firstItem="Cq7-x4-6PD" firstAttribute="top" secondItem="ipg-IC-Jxj" secondAttribute="top" constant="10" id="pgo-iK-k3f"/>
+                        <constraint firstAttribute="trailing" secondItem="Cq7-x4-6PD" secondAttribute="trailing" constant="10" id="sZ1-R8-ViQ"/>
+                        <constraint firstItem="xaF-1E-kpE" firstAttribute="leading" secondItem="ipg-IC-Jxj" secondAttribute="leading" constant="10" id="yrT-oH-d9E"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="veF-MQ-woi">
+                    <rect key="frame" x="0.0" y="210" width="375" height="457"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ipg-IC-Jxj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="06p-sx-4un"/>
+                <constraint firstAttribute="trailing" secondItem="ipg-IC-Jxj" secondAttribute="trailing" id="4bb-ny-edE"/>
+                <constraint firstItem="ipg-IC-Jxj" firstAttribute="top" secondItem="fkV-2n-dDe" secondAttribute="bottom" id="6Mt-R4-K4f"/>
+                <constraint firstAttribute="bottom" secondItem="veF-MQ-woi" secondAttribute="bottom" id="JUP-aZ-BDy"/>
+                <constraint firstItem="veF-MQ-woi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TXK-q5-jAG"/>
+                <constraint firstAttribute="trailing" secondItem="veF-MQ-woi" secondAttribute="trailing" id="ZEv-qC-8ef"/>
+                <constraint firstItem="fkV-2n-dDe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cR8-Gp-UGF"/>
+                <constraint firstItem="veF-MQ-woi" firstAttribute="top" secondItem="ipg-IC-Jxj" secondAttribute="bottom" id="riH-rA-xQh"/>
+                <constraint firstItem="fkV-2n-dDe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tFM-Pf-MIO"/>
+                <constraint firstAttribute="trailing" secondItem="fkV-2n-dDe" secondAttribute="trailing" id="zTx-PI-9Ue"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="300" height="55"/>
+    </resources>
+</document>

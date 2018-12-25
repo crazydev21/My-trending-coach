@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "0a343b38-18f9-7d40-8db3-260c53c81227" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0a343b38-18f9-7d40-8db3-260c53c81227" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "76BC4F26-EB83-4F3D-9314-051DF1FD747F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0a343b38-18f9-7d40-8db3-260c53c81227" : "..\/..\/..\/Downloads\/MeoVendoCompanyiOS"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "My Trending Coach App",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "My Trending Coach App.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/server2008.bit01.com:8443\/svn\/MeoVendoCompanyiOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0a343b38-18f9-7d40-8db3-260c53c81227"
+    }
+  ]
+}
